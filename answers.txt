@@ -1,0 +1,170 @@
+1.  TO INSERT DATA FOR CALENDAR DB
+
+
+>use contestant
+switched to db contestant
+> db
+contestant
+> db.poll.insertMany[{"id":"1",
+"Date":"2021-08-03",
+"Topic":"html",
+"Class_link":"https://zoom.us/",
+"Recording_link":"https://zoom.us/"},
+{"id":"2",
+"Date":"2021-08-04",
+"Topic":"css",
+"Class_link":"https://zoom.us/",
+"Recording_link":"https://zoom.us/"},
+{"id":"3",
+"Date":"2021-08-05",
+"Topic":"bootstrap",
+"Class_link":"https://zoom.us/",
+"Recording_link":"https://zoom.us/"},
+{"id":"4",
+"Date":"2021-08-07",
+"Topic":"dom",
+"Class_link":"https://zoom.us/",
+"Recording_link":"https://zoom.us/"},
+{"id":"5",
+"Date":"2021-08-08",
+"Topic":"react",
+"Class_link":"https://zoom.us/",
+"Recording_link":"https://zoom.us/"}] )
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6147129726f57f885b303e47"),
+                ObjectId("6147129726f57f885b303e48"),
+                ObjectId("6147129726f57f885b303e49"),
+                ObjectId("6147129726f57f885b303e4a"),
+                ObjectId("6147129726f57f885b303e4b")
+        ]
+}
+
+
+
+2.  FOR ATTENDANCE DB
+
+
+>use contestant
+switched to db contestant
+> db.attendance.insertMany([{"id":"1",
+"Student_name":"Mark",
+"Days_present":"13",
+"Days_absent":"7",
+"Total_working_days":"20"},
+{"id":"2",
+"Student_name":"Han",
+"Days_present":"16",
+"Days_absent":"4",
+"Total_working_days":"20"},
+{"id":"3",
+"Student_name":"Suga",
+"Days_present":"17",
+"Days_absent":"3",
+"Total_working_days":"20"},
+{"id":"4",
+"Student_name":"Ken",
+"Days_present":"20",
+"Days_absent":"0",
+"Total_working_days":"20"},
+{"id":"5",
+"Student_name":"Lily",
+"Days_present":"18",
+"Days_absent":"2",
+"Total_working_days":"20"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6147169a26f57f885b303e4c"),
+                ObjectId("6147169a26f57f885b303e4d"),
+                ObjectId("6147169a26f57f885b303e4e"),
+                ObjectId("6147169a26f57f885b303e4f"),
+                ObjectId("6147169a26f57f885b303e50")
+        ]
+}
+
+3.  FOR STUDENT DETAILS DB
+
+
+> use contestant
+switched to db contestant
+> db.student_details.insertMany[{"id":"1",
+"Student_name":"Mark",
+"Email":"marktuan@gmail.com",
+"Codekata_submission":"60"
+},
+{"id":"2",
+"Student_name":"Han",
+"Email":"hanny@gmail.com",
+"Codekata_submission":"55"},
+{"id":"3",
+"Student_name":"Suga",
+"Email":"sugajk@gmail.com",
+"Codekata_submission":"100"},
+{"id":"4",
+"Student_name":"Ken",
+"Email":"kenny56@gmail.com",
+"Codekata_submission":"45"},
+{"id":"5",
+"Student_name":"Lily",
+"Email":"lily67@gmail.com",
+"Codekata_submission":"78"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("6147194e26f57f885b303e51"),
+                ObjectId("6147194e26f57f885b303e52"),
+                ObjectId("6147194e26f57f885b303e53"),
+                ObjectId("6147194e26f57f885b303e54"),
+                ObjectId("6147194e26f57f885b303e55")
+        ]
+}
+
+
+4.  FOR TASKS DATABASE
+
+
+> use contestant
+switched to db contestant
+> db.tasks.insertMany([{"id":"1",
+"Task":"HTML",
+"Task/Assessment":"Task",
+"Submitted At":"2021-08-02",
+"Marks":"8.7"
+},
+{"id":"2",
+"Task":"CSS",
+"Task/Assessment":"Task",
+"Submitted At":"2021-08-08",
+"Marks":"10"},
+{"id":"3",
+"Task":"bootstrap",
+"Task/Assessment":"Task",
+"Submitted At":"2021-08-15",
+"Marks":"9.2"},
+{"id":"4",
+"Task":"DOM",
+"Task/Assessment":"Task",
+"Submitted At":"2021-08-22",
+"Marks":"8.9"},
+{"id":"5",
+"Task":"React",
+"Task/Assessment":"Task",
+"Submitted At":"2021-08-27",
+"Marks":"9"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("61471b4826f57f885b303e56"),
+                ObjectId("61471b4826f57f885b303e57"),
+                ObjectId("61471b4826f57f885b303e58"),
+                ObjectId("61471b4826f57f885b303e59"),
+                ObjectId("61471b4826f57f885b303e5a")
+        ]
+}
+> show collections
+attendance
+poll
+student_details
+tasks
